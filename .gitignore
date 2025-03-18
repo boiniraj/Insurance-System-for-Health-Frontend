@@ -1,8 +1,11 @@
+# Ignore specific HTML files
 about.html
 contact.html
 pakage.html
 PlanAdmin.html
-styles.css
 PaymentDetails.html
+
+# Ignore CSS file
+styles.css
 
 
