@@ -97,7 +97,7 @@
                 
                 document.getElementById('registerResponse').innerText = "Register Successfully Completed";
                 setTimeout(() => {
-            window.location.href = 'caseNo.html'; // Change the URL as needed
+            window.location.href = 'CaseNo.html'; // Change the URL as needed
              }, 2000);
             }
             
