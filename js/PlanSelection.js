@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchPlans() {
-    fetch("http://localhost:9091/DataCollection-api/plans-data")  // Fetching plans
+    fetch("http://localhost:7071/DataCollection-api/plans-data")  // Fetching plans
         .then(response => response.json())
         .then(data => {
             let planDropdown = document.getElementById("plan");
