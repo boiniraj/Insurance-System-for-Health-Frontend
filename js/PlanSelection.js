@@ -1,5 +1,5 @@
 function fetchPlanDetails() {
-    fetch('http://localhost:9091/DataCollection-api/plans-data') // Update the API endpoint
+    fetch('http://localhost:7071/DataCollection-api/plans-data') // Update the API endpoint
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById('planTableBody');
