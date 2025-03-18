@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveEducation</title>
+    <link rel="stylesheet" href="Css/SaveEducation.css">
+    
+</head>
+<body>
+    <div class="header">
+        ISH (Insurance System for Health)
+        <div class="sub-header">A streamlined platform for citizen health and insurance registration</div>
+    </div>
+
+    <div class="info-message">
+        <p>Please Fill Your Education Details</p>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 ISH - All Rights Reserved
+    </div>
+
+
+    <div class="container">
+        <h2>Education Details Form</h2>
+        <form id="educationForm">
+            
+            <label for="educationId">Education No:</label>
+            <input type="number" id="educationId" name="educationId" placeholder="Enter Your 10th Registration No" required>
+            <label for="caseNo">Case No:</label>
+            <input type="number" id="caseNo" name="caseNo" placeholder="Enter Your CaseNo"   required>
+            <label for="qualification">Highest Qualification:</label>
+            <select id="qualification" name="qualification"  required>
+
+                <option value="">-- Select Qualification --</option>
+    
+                <!-- School Level -->
+                <option value="High School">High School</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Diploma">Diploma</option>
+            
+                <!-- Bachelor's Degrees -->
+                <option value="BSc">BSc (Bachelor of Science)</option>
+                <option value="BCA">BCA (Bachelor of Computer Applications)</option>
+                <option value="BBA">BBA (Bachelor of Business Administration)</option>
+                <option value="BCom">BCom (Bachelor of Commerce)</option>
+                <option value="BA">BA (Bachelor of Arts)</option>
+                <option value="BTech">BTech (Bachelor of Technology)</option>
+                <option value="BE">BE (Bachelor of Engineering)</option>
+                <option value="LLB">LLB (Bachelor of Law)</option>
+                <option value="MBBS">MBBS (Bachelor of Medicine, Bachelor of Surgery)</option>
+                
+                <!-- Master's Degrees -->
+                <option value="MSc">MSc (Master of Science)</option>
+                <option value="MCA">MCA (Master of Computer Applications)</option>
+                <option value="MBA">MBA (Master of Business Administration)</option>
+                <option value="MCom">MCom (Master of Commerce)</option>
+                <option value="MA">MA (Master of Arts)</option>
+                <option value="MTech">MTech (Master of Technology)</option>
+                <option value="ME">ME (Master of Engineering)</option>
+                <option value="MCS">MCS (Master of Computer Science)</option>
+                <option value="LLM">LLM (Master of Laws)</option>
+                
+                <!-- Higher Studies -->
+                <option value="MPhil">MPhil (Master of Philosophy)</option>
+                <option value="PhD">PhD (Doctorate)</option>
+                <option value="Postdoctoral">Postdoctoral</option>
+            
+                <!-- Other Options -->
+                <option value="Professional Certification">Professional Certification</option>
+                <option value="Vocational Training">Vocational Training</option>
+                <option value="Other">Other</option>
+            </select>
+           
+            <label for="passOutYear">Passout Year:</label>
+            <input type="number" id="passOutYear" name="passOutYear" min="2000" max="2025" placeholder="Enter Your Passout Year" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+
+    <script src="js/SaveEducation.js">
+
+    
+    </script>
+</body>
+</html>

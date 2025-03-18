@@ -1,0 +1,210 @@
+       
+   /* General Reset */
+   body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Sub Header */
+.sub-header {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* Information Message */
+.info-message {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    width: 100%;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #004080;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Message */
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Buttons & Select Elements */
+select, button {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #002d5e;
+}
+
+/* Plan Selection */
+.planselection {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.planselection button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.planselection b {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 18px;
+        padding: 15px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+    
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 5vw; /* Scales dynamically */
+        padding: 12px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .footer {
+        font-size: 10px;
+        padding: 8px;
+    }
+}

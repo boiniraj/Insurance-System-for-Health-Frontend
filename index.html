@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Care - About Us</title>
+    <link rel="stylesheet" href="Css/index.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Insurance System for Health</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html">Packages</a>
+            <a href="index.html">Contact us</a>
+            <a href="index.html">About us</a>
+        </div>
+        <div class="buttons">
+            <button id="signupBtn">Sign Up</button>
+            <button id="loginBtn">Login</button>
+        </div>
+    </div>
+
+
+
+    <div class="hero-section">
+        <img src="assets/img/teamcanva.png" alt="LifeCare Banner">
+
+        <div class="hero-text">
+            <h1>About LifeCare</h1>
+            <p>Live Your Life with Care</p>
+        </div>
+
+        <div class="content">
+            <h2>20+ YEARS OF INSURING LIVES AND EMPOWERING PEOPLE</h2>
+        </div>
+
+        <div class="overview">
+            <h2>Overview</h2>
+
+            <div>
+                <b>Who we are?</b>
+                <p>The Insurance System for Health (ISH) is a comprehensive platform designed to provide seamless access to healthcare and insurance services.</p>
+            </div>
+
+            <div>
+                <b>Our Mission</b>
+                <p>We strive to make healthcare insurance accessible, efficient, and secure by leveraging modern technology.</p>
+            </div>
+
+            <div>
+                <b>Our Vision</b>
+                <p>To revolutionize the health insurance industry by offering innovative, reliable, and affordable solutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Life Care. All Rights Reserved.
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <input type="text" id="signupName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <button onclick="signup()">Register</button>
+            <p id="signupError" style="color: red;"></p>
+        </div>
+    </div>
+
+    <!-- Activation Modal -->
+    <div id="activateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('activateModal')">&times;</span>
+            <h2>Activate Account</h2>
+            <input type="email" id="activateEmail" placeholder="Email" required>
+            <input type="password" id="tempPassword" placeholder="Temporary Password" required>
+            <input type="password" id="newPassword" placeholder="New Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button onclick="activateUser()">Activate</button>
+            <span>check for email temp password</span>
+            <p id="activateError" style="color: red;"></p>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p id="loginError" style="color: red;"></p>
+        </div>
+    </div>
+
+    <script src="js/index.js">
+        // Open and close modal functions
+        
+    </script>
+</body>
+</html>

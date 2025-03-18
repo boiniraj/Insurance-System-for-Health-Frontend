@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaymentsPage</title>
+    <link rel="stylesheet" href="Css/PaymentsPage.css">
+    
+</head>
+<body>
+
+    <div class="header">
+        ISH (Insurance System for Health)
+        <div class="sub-header">A streamlined platform for citizen health and insurance registration</div>
+    </div>
+
+    <div class="info-message">
+        <p>We have sent your Application ID to your email. Kindly check your inbox and provide the Application ID to proceed.</p>
+    </div>
+        
+
+    <div class="container" id="paymentForm">
+        <h2>Payment Details</h2>
+        <div class="payment-info">
+            <p><strong>Case Number:</strong> <span id="caseNo"></span></p>
+            <p><strong>Bank Name:</strong> <span id="bankName"></span></p>
+            <p><strong>Account Number:</strong> <span id="accNo"></span></p>
+            <p><strong>Beneficiary Amount:</strong> ₹<span id="benficiaryAmt"></span></p>
+        </div>
+        
+        <button id="submitPayment" class="btn">Submit Payment</button>
+        <div class="loader" id="loader"></div>
+    </div>
+
+    <div class="success-container" id="successPage">
+        <div class="tick-icon">✔️</div>
+        <p class="success-message">Payment Successful!</p>
+        <div class="transaction-details">
+            <p><strong>Amount Paid:</strong> ₹<span id="paidAmount"></span></p>
+            <p><strong>Transaction ID:</strong> <span id="transactionId"></span></p>
+            <p><strong>Date & Time:</strong> <span id="dateTime"></span></p>
+        </div>
+        <button class="back-btn" onclick="goHome()">Back to Home</button>
+    </div>
+
+
+
+
+     <!-- Footer -->
+     <div class="footer">
+        &copy; 2025 ISH - All Rights Reserved
+    </div>
+
+    
+
+    <script src="js/PaymentsPage.js">
+        // Retrieve data from localStorage
+        
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

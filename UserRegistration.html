@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISH - Citizen Registration</title>
+    <link rel="stylesheet" href="Css/UserRegister.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        ISH (Insurance System for Health)
+        <div class="sub-header">A streamlined platform for citizen health and insurance registration</div>
+    </div>
+
+    <div class="info-message">
+        <p>Please provide your details to complete the insurance registration process.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+
+        <!-- Registration Form -->
+        <div class="form-container">
+            <h2>Public Insurance Portal</h2>
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+                <span id="fullNameError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <span id="emailError" class="error-message"></span>
+            </div>
+
+            <div class="form-group" required>
+                <label>Gender:</label>
+                <select id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group" required>
+                <label>Phone Number:</label>
+                <input type="number" id="phoneNo" placeholder="Enter your phone number" required>
+                <span id="phoneNoError" class="error-message"></span>
+            </div>
+
+            <div class="form-group" required>
+                <label>Adhar No:</label>
+                <input type="number" id="adharNo" placeholder="Enter your AdharNo">
+                <span id="adharNoError" class="error-message"></span>
+            </div>
+
+            <div class="form-group" required>
+                <label>Account Number:</label>
+                <input type="number" id="accountNo" placeholder="Enter your account number">
+            </div>
+
+            <div class="form-group" required>
+                <label>Bank Name:</label>
+                <select id="bankName">
+                    <option value="">Select Bank</option>
+                    <option value="State Bank of India">State Bank of India</option>
+                    <option value="Punjab National Bank">Punjab National Bank</option>
+                    <option value="HDFC Bank">HDFC Bank</option>
+                    <option value="ICICI Bank">ICICI Bank</option>
+                    <option value="Axis Bank">Axis Bank</option>
+                    <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                    <option value="Bank of Baroda">Bank of Baroda</option>
+                    <option value="Canara Bank">Canara Bank</option>
+                    <option value="Union Bank of India">Union Bank of India</option>
+                    <option value="IndusInd Bank">IndusInd Bank</option>
+                    <option value="Yes Bank">Yes Bank</option>
+                    <option value="IDBI Bank">IDBI Bank</option>
+                    <option value="Federal Bank">Federal Bank</option>
+                    <option value="RBL Bank">RBL Bank</option>
+                    <option value="UCO Bank">UCO Bank</option>
+                    <option value="Indian Bank">Indian Bank</option>
+                    <option value="Bank of Maharashtra">Bank of Maharashtra</option>
+                    <option value="Punjab & Sind Bank">Punjab & Sind Bank</option>
+                    <option value="Central Bank of India">Central Bank of India</option>
+                    <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                </select>
+            </div>
+
+            <div class="form-group" required>
+                <label>State:</label>
+                <select id="stateName">
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+
+            <div class="form-group" required>
+                <label>Date of Birth:</label>
+                <input type="date" id="dob">
+            </div>
+
+            <button onclick="registerCitizen()">Register</button>
+            <p id="registerResponse" class="response"></p>
+        </div>
+
+    
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 ISH - All Rights Reserved
+    </div>
+
+    <!-- JavaScript -->
+     <script src="js/UserRegister.js"></script>
+    
+
+</body>
+</html>
+

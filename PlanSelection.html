@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Management</title>
+    <link rel="stylesheet" href="Css/PlanSelection.css">
+</head>
+<body>
+
+    <div class="header">
+        ISH (Insurance System for Health)
+        <div class="sub-header">A streamlined platform for citizen health and insurance registration</div>
+    </div>
+
+    <!--<div class="info-message">
+        <p>Plan Details.</p>
+    </div>-->
+
+
+    <div class="container">
+        <h2>Plan Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan ID</th>
+                    <th>Plan Name</th>
+                    <th>Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Active Status</th>
+                </tr>
+            </thead>
+            <tbody id="planTableBody">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="container">
+        <h2>Select a Plan</h2>
+
+        <label for="caseNo">Enter Case Number:</label>
+        <input type="number" id="caseNo" placeholder="Enter Case No" required>
+
+        <label for="plan">Choose a Plan:</label>
+        <select id="plan">
+            <option value="">-- Select a Plan --</option>
+        </select>
+
+        <button onclick="savePlan()">Save Plan</button>
+
+        <p id="message" class="message"></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 ISH - All Rights Reserved
+    </div>
+
+    <script src="js/PlanSelection.js">
+        
+        
+
+    </script>
+</body>
+</html>

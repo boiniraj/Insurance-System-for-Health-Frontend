@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowAllData</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="Css/ShowAllDataWithCaseNo.css">
+</head>
+<body>
+    <div class="header">
+        ISH (Insurance System for Health)
+        <div class="sub-header">A streamlined platform for citizen health and insurance registration</div>
+    </div>
+
+
+    <div class="info-message">
+        <p>Please review the details you have provided before proceeding.</p>
+    </div>
+
+
+    <div class="container">
+        <h2>Citizen Report Lookup</h2>
+        <input type="number" id="caseNo" placeholder="Enter Case Number">
+        <button onclick="fetchReport()">Get Report</button>
+        <button onclick="downloadPDF()" style="background: #007bff;">Download PDF</button>
+        <button onclick="goToNextPage()" style="background: #ff9800;">Go to Next Page</button>
+        <div id="output" class="report"></div>
+    </div>
+    <div class="footer">
+        &copy; 2025 ISH - All Rights Reserved
+    </div>
+    <script src="js/ShowAllDataWithCaseNo.js">
+        
+    </script>
+</body>
+</html>
