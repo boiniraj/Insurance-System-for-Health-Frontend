@@ -16,7 +16,7 @@ let name = document.getElementById("signupName").value;
 let email = document.getElementById("signupEmail").value;
 let password = document.getElementById("signupPassword").value;
 
-fetch('http://localhost:7079/user-api/Register-User', {
+fetch('http://localhost:7777/user-api/Register-User', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ name, email, password })

@@ -1,14 +1,14 @@
-document.getElementById("caseNo").textContent = localStorage.getItem("caseNo") || "N/A";
+        document.getElementById("caseNo").textContent = localStorage.getItem("caseNo") || "N/A";
         document.getElementById("bankName").textContent = localStorage.getItem("bankName") || "N/A";
         document.getElementById("accNo").textContent = localStorage.getItem("accNo") || "N/A";
-        document.getElementById("benficiaryAmt").textContent = localStorage.getItem("benficiaryAmt") || "N/A";
+        document.getElementById("beneficiaryAmt").textContent = localStorage.getItem("beneficiaryAmt") || "N/A";
 
         document.getElementById("submitPayment").addEventListener("click", function () {
             let paymentData = {
                 caseNo: localStorage.getItem("caseNo") ? parseInt(localStorage.getItem("caseNo")) : null,
                 bankName: localStorage.getItem("bankName") || "N/A",
                 accNo: localStorage.getItem("accNo") || "N/A",
-                benficiaryAmt: localStorage.getItem("benficiaryAmt") ? parseFloat(localStorage.getItem("benficiaryAmt")) : 0
+                beneficiaryAmt: localStorage.getItem("beneficiaryAmt") ? parseFloat(localStorage.getItem("beneficiaryAmt")) : 0
             };
 
             document.getElementById("loader").style.display = "block";
@@ -23,10 +23,10 @@ document.getElementById("caseNo").textContent = localStorage.getItem("caseNo") |
             .then(data => {
                 document.getElementById("paymentForm").style.display = "none";
                 document.getElementById("successPage").style.display = "block";
-                document.getElementById("paidAmount").textContent = paymentData.benficiaryAmt;
+                document.getElementById("paidAmount").textContent = paymentData.beneficiaryAmt;
                 document.getElementById("transactionId").textContent = data.transactionId;
-                let paymentDate = new Date(data.paymentDate);
-    document.getElementById("dateTime").textContent = paymentDate.toLocaleString();
+                let paymentDate = new Date(data.date + 'T00:00:00');
+    document.getElementById("dateTime").textContent = paymentDate.toLocaleDateString();
                 
             })
             .catch(error => {
