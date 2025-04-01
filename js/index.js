@@ -16,7 +16,7 @@ let name = document.getElementById("signupName").value;
 let email = document.getElementById("signupEmail").value;
 let password = document.getElementById("signupPassword").value;
 
-fetch('http://localhost:7777/user-api/Register-User', {
+fetch('http://localhost:7079/user-api/Register-User', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ name, email, password })
@@ -48,7 +48,7 @@ document.getElementById('activateError').textContent = "Passwords do not match."
 return;
 }
 
-fetch('http://localhost:7777/user-api/activate-User', {
+fetch('http://localhost:7079/user-api/activate-User', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ email, tempPassword, confirmPassword }) // Fix: Use confirmPassword, not newPassword
@@ -91,7 +91,7 @@ function login() {
 let email = document.getElementById('loginEmail').value;
 let password = document.getElementById('loginPassword').value;
 
-fetch('http://localhost:7777/user-api/login-User', {
+fetch('http://localhost:7079/user-api/login-User', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ email, password })
