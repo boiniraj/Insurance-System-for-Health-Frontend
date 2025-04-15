@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:7071/DataCollection-api";
+const BASE_URL = "https://data-collection-lrwd.onrender.com/DataCollection-api";
 
         async function generateCaseNo() {
             let appId = document.getElementById('appId').value;
