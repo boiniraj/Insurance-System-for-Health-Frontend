@@ -18,6 +18,7 @@ let password = document.getElementById("signupPassword").value;
 
 fetch('https://user-management-ig8b.onrender.com/user-api/Register-User', {
 method: 'POST',
+mode: 'cors',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ name, email, password })
 })
