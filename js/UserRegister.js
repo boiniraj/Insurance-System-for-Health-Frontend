@@ -79,8 +79,9 @@
                 dob
             };
 
-            fetch('http://localhost:6061/citizen-api/save', {
+            fetch('https://citizen-registrations.onrender.com/citizen-api/save', {
                 method: 'POST',
+                mode : 'cors',    
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(requestData)
             })
