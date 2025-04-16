@@ -7,7 +7,7 @@ function checkEligibility() {
         return;
     }
 
-    fetch(`http://localhost:7072/elgibility-api/citizenElgibility/${caseNo}`, {
+    fetch(`https://eligibility-determination.onrender.com/elgibility-api/citizenElgibility/${caseNo}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

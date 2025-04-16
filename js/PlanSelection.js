@@ -1,5 +1,5 @@
 function fetchPlanDetails() {
-    fetch('http://localhost:7071/DataCollection-api/plans-data') // Update the API endpoint
+    fetch('https://data-collection-lrwd.onrender.com/DataCollection-api/plans-data') // Update the API endpoint
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById('planTableBody');
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchPlans() {
-    fetch("http://localhost:7071/DataCollection-api/plans-data")  // Fetching plans
+    fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/plans-data")  // Fetching plans
         .then(response => response.json())
         .then(data => {
             let planDropdown = document.getElementById("plan");
@@ -60,7 +60,7 @@ function savePlan() {
         planId: parseInt(selectedPlanId)
     };
 
-    fetch("http://localhost:7071/DataCollection-api/savePlan", {
+    fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/savePlan", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

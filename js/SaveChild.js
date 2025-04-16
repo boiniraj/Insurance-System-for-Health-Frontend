@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }];
 
         try {
-            const response = await fetch("http://localhost:7071/DataCollection-api/saveChild", {
+            const response = await fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveChild", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(childData)

@@ -1,4 +1,13 @@
 
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+        
+        
         function registerCitizen() {
             const fullName = document.getElementById('fullName').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -79,6 +88,8 @@
                 dob
             };
 
+            showLoader();
+
             fetch('https://citizen-registrations.onrender.com/citizen-api/save', {
                 method: 'POST',
                 mode: 'cors',    
@@ -88,6 +99,7 @@
             .then(response => response.json())
             .then(data =>
             { 
+                hideLoader();
               if(data.error)
             {
                document.getElementById("emailError").innerText="Email already registered";
@@ -104,11 +116,12 @@
             
     })
     
-            .catch(error => 
-
-                
-
-            console.error('Error:', error));
+    .catch(error => {
+        hideLoader();  // 👉 Hide loader on error
+        console.error('Error:', error);
+        registerResponse.style.color = "red";
+        registerResponse.innerText = "An error occurred. Please try again!";
+      });
         }
         
 

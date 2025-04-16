@@ -8,7 +8,7 @@ let fetchedData = {}; // Global variable to store fetched data
             }
 
             
-            fetch(`http://localhost:7071/DataCollection-api/citizenReport/${caseNo}`)
+            fetch(`https://data-collection-lrwd.onrender.com/DataCollection-api/citizenReport/${caseNo}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Invalid Case No:"+ caseNo);

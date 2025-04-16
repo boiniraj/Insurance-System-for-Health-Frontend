@@ -20,7 +20,7 @@ document.getElementById("educationForm").addEventListener("submit", function(eve
         passOutYear: parseInt(passOutYear)
     };
 
-    fetch("http://localhost:7071/DataCollection-api/saveEducation", {
+    fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveEducation", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
