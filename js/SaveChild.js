@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let nextButton = document.getElementById("nextButton");
 
         // Validate input fields
-        if (!caseNo || !dob || !aadharNo) {
+        if (!caseNo || !dob || !adharNo) {
             messageDiv.innerText = "❌ Error: All fields are required.";
             messageDiv.style.color = "red";
             return;
         }
 
         // Validate Aadhar Number (should be exactly 12 digits)
-        if (!/^\d{12}$/.test(aadharNo)) {
+        if (!/^\d{12}$/.test(adharNo)) {
             messageDiv.innerText = "❌ Error: Invalid Aadhar Number (must be 12 digits).";
             messageDiv.style.color = "red";
             return;
