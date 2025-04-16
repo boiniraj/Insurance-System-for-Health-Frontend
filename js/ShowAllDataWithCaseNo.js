@@ -1,3 +1,13 @@
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+  
+
+
 let fetchedData = {}; // Global variable to store fetched data
 
         function fetchReport() {
@@ -7,7 +17,7 @@ let fetchedData = {}; // Global variable to store fetched data
                 return;
             }
 
-            
+            showLoader();
             fetch(`https://data-collection-lrwd.onrender.com/DataCollection-api/citizenReport/${caseNo}`)
             .then(response => {
                 if (!response.ok) {
@@ -52,6 +62,9 @@ let fetchedData = {}; // Global variable to store fetched data
             })
             .catch(error => {
                 document.getElementById("output").innerHTML = `<p class="error">${error.message}</p>`;
+            })
+            .finally(() => {
+                hideLoader();
             });
         }
 

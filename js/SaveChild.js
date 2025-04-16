@@ -1,4 +1,14 @@
 
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+  
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("childForm").addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent default form submission
@@ -31,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }];
 
         try {
+            showLoader();
             const response = await fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveChild", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -52,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error:", error);
             messageDiv.innerText = "❌ Error: " + error.message;
             messageDiv.style.color = "red";
+        }finally {
+            hideLoader(); // Always hide loader regardless of success or error
         }
     });
 

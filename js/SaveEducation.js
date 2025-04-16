@@ -1,3 +1,13 @@
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+  
+
+
 document.getElementById("educationForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -19,6 +29,7 @@ document.getElementById("educationForm").addEventListener("submit", function(eve
         highestQualification: qualification,
         passOutYear: parseInt(passOutYear)
     };
+    showLoader();
 
     fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveEducation", {
         method: "POST",
@@ -43,5 +54,8 @@ document.getElementById("educationForm").addEventListener("submit", function(eve
     .catch(error => {
         document.getElementById("message").innerText = "Error: " + error.message;
         document.getElementById("message").style.color = "red";
+    })
+    .finally(() => {
+        hideLoader(); // Always hide loader after fetch completes
     });
 });

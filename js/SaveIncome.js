@@ -1,3 +1,13 @@
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+  
+
+
 document.getElementById("incomeForm").addEventListener("submit", async function(event) {
     event.preventDefault(); // Prevent form from refreshing the page
     
@@ -14,6 +24,7 @@ document.getElementById("incomeForm").addEventListener("submit", async function(
     };
 
     try {
+        showLoader();
         const response = await fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveIncome", {
             method: "POST",
             headers: {
@@ -37,5 +48,7 @@ document.getElementById("incomeForm").addEventListener("submit", async function(
     } catch (error) {
         document.getElementById("message").textContent = "An unexpected error occurred!";
         document.getElementById("message").style.color = "red";
+    }finally {
+        hideLoader();
     }
 });

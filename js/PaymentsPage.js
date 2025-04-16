@@ -1,3 +1,16 @@
+        
+        function showLoader() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+          }
+          
+          function hideLoader() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+          }
+          
+        
+        
+        
+        
         document.getElementById("caseNo").textContent = localStorage.getItem("caseNo") || "N/A";
         document.getElementById("bankName").textContent = localStorage.getItem("bankName") || "N/A";
         document.getElementById("accNo").textContent = localStorage.getItem("accNo") || "N/A";

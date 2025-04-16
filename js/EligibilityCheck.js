@@ -1,3 +1,13 @@
+
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+  
+
 function checkEligibility() {
     let caseNo = document.getElementById("caseNo").value;
     let resultDiv = document.getElementById("result");
@@ -6,6 +16,8 @@ function checkEligibility() {
         resultDiv.innerHTML = "<p class='error'>Please enter a Case Number.</p>";
         return;
     }
+
+    showLoader();
 
     fetch(`https://eligibility-determination.onrender.com/elgibility-api/citizenElgibility/${caseNo}`, {
         method: "POST",
@@ -20,10 +32,11 @@ function checkEligibility() {
         return response.json();
     })
     .then(data => {
-        let isMissingData = (!data.bankName || data.bankName === "N/A") || 
-                            (!data.accNo || data.accNo === "N/A") || 
-                            (!data.planStatus || data.planStatus==="Denied");
-                            (!data.beneficiaryAmt || data.beneficiaryAmt === "N/A");
+        let isMissingData = 
+        (!data.bankName || data.bankName === "N/A") || 
+        (!data.accNo || data.accNo === "N/A") || 
+        (!data.planStatus || data.planStatus === "Denied") || 
+        (!data.beneficiaryAmt || data.beneficiaryAmt === "N/A");
 
         resultDiv.innerHTML = `
             <h3>Eligibility Details</h3>
@@ -52,6 +65,9 @@ function checkEligibility() {
     })
     .catch(error => {
         resultDiv.innerHTML = `<p class='error'>${error.message}</p>`;
+    })
+    .finally(() => {
+        hideLoader();
     });
 }
 
