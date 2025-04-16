@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let caseNo = document.getElementById("caseNo").value.trim();
         let dob = document.getElementById("dob").value.trim();
-        let aadharNo = document.getElementById("adharNo").value.trim();
+        let adharNo = document.getElementById("adharNo").value.trim();
         let messageDiv = document.getElementById("message");
         let nextButton = document.getElementById("nextButton");
 
@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Prepare data object
-        let childData = {
+        let childData = [{
             caseNo: parseInt(caseNo, 10),
             dob: dob,
-            adharNo: aadharNo
-        };
+            adharNo: adharNo
+        }];
 
         try {
             showLoader();
