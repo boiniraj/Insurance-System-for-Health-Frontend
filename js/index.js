@@ -10,11 +10,22 @@ function closeModal(modalId) {
 document.getElementById('signupBtn').addEventListener('click', () => openModal('signupModal'));
 document.getElementById('loginBtn').addEventListener('click', () => openModal('loginModal'));
 
+function showLoader() {
+    document.getElementById('loadingOverlay').style.display = 'flex';
+  }
+  
+  // Hide the loading spinner overlay
+  function hideLoader() {
+    document.getElementById('loadingOverlay').style.display = 'none';
+  }
+
 // Signup function
 function signup() {
 let name = document.getElementById("signupName").value;
 let email = document.getElementById("signupEmail").value;
 let password = document.getElementById("signupPassword").value;
+
+showLoader(); 
 
 fetch('https://user-management-ig8b.onrender.com/user-api/Register-User', {
 method: 'POST',
@@ -35,8 +46,18 @@ if (result.message && result.message.toLowerCase().includes("success")) {
 .catch(error => {
 console.error("Signup Error:", error);
 document.getElementById('signupError').textContent = "An error occurred. Please try again!";
-});
+})
+
+.finally(() => {
+    hideLoader(); // Hide the loader after the request completes (both success and error)
+  });
+
 }
+
+
+
+
+
 // Activate User function
 function activateUser() {
 let email = document.getElementById('activateEmail').value;
@@ -48,6 +69,8 @@ if (newPassword !== confirmPassword) {
 document.getElementById('activateError').textContent = "Passwords do not match.";
 return;
 }
+
+showLoader(); 
 
 fetch('https://user-management-ig8b.onrender.com/user-api/activate-User', {
 method: 'POST',
@@ -68,7 +91,12 @@ if (result.status === "success") { // Fix: Check for "status" field
 .catch(error => {
 console.error("Activation Error:", error);
 document.getElementById('activateError').textContent = "An error occurred. Please try again!";
-});
+})
+
+.finally(() => {
+    hideLoader(); // Hide the loader after the request completes (both success and error)
+  });
+
 }
 
 //login
@@ -91,6 +119,8 @@ if (!isUserLoggedIn() && (this.getAttribute('href') === 'pakage.html' || this.ge
 function login() {
 let email = document.getElementById('loginEmail').value;
 let password = document.getElementById('loginPassword').value;
+
+showLoader(); 
 
 fetch('https://user-management-ig8b.onrender.com/user-api/login-User', {
 method: 'POST',
@@ -122,7 +152,11 @@ if (result.message && result.message.toLowerCase().includes("success")) {
 .catch(error => {
 console.error("Login Error:", error);
 document.getElementById('loginError').textContent = "An error occurred. Please try again!";
-});
+})
+
+.finally(() => {
+    hideLoader(); // Hide the loader after the request completes (both success and error)
+  });
 }
 
 // Function to log out user
