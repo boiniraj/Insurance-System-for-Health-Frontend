@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Prepare data object
-        let childData = [{
+        let childData = {
             caseNo: parseInt(caseNo, 10),
             dob: dob,
             adharNo: aadharNo
-        }];
+        };
 
         try {
             showLoader();
