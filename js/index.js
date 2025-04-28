@@ -108,7 +108,7 @@ return localStorage.getItem('userLoggedIn') === 'true';
 // Handle navigation links
 document.querySelectorAll('.nav-links a').forEach(link => {
 link.addEventListener('click', function (event) {
-if (!isUserLoggedIn() && (this.getAttribute('href') === 'pakage.html' || this.getAttribute('href') === 'contact.html')) {
+if (!isUserLoggedIn() && (this.getAttribute('href') === 'About.html' || this.getAttribute('href') === 'Contact.html')) {
     event.preventDefault(); // Stop navigation
     openModal('signupModal'); // Show Sign Up modal
 }
