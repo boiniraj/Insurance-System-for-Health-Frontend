@@ -27,7 +27,7 @@
             document.getElementById("loader").style.display = "block";
             document.getElementById("submitPayment").disabled = true;
 
-            fetch("https://payment-module-9y1r.onrender.com/Payments-api/savePayments", {
+            fetch("https://payment-module-tvqy.onrender.com/Payments-api/savePayments", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(paymentData)

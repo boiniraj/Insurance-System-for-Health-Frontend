@@ -31,7 +31,7 @@ document.getElementById("educationForm").addEventListener("submit", function(eve
     };
     showLoader();
 
-    fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveEducation", {
+    fetch("https://data-collection-7ozf.onrender.com/DataCollection-api/saveEducation", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

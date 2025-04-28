@@ -25,7 +25,7 @@ document.getElementById("incomeForm").addEventListener("submit", async function(
 
     try {
         showLoader();
-        const response = await fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveIncome", {
+        const response = await fetch("https://data-collection-7ozf.onrender.com/DataCollection-api/saveIncome", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -19,7 +19,7 @@ function checkEligibility() {
 
     showLoader();
 
-    fetch(`https://eligibility-determination.onrender.com/elgibility-api/citizenElgibility/${caseNo}`, {
+    fetch(`https://elgibilty-determation.onrender.com/elgibility-api/citizenElgibility/${caseNo}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

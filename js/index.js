@@ -27,7 +27,7 @@ let password = document.getElementById("signupPassword").value;
 
 showLoader(); 
 
-fetch('https://user-management-ig8b.onrender.com/user-api/Register-User', {
+fetch('https://user-management-4giw.onrender.com/user-api/Register-User', {
 method: 'POST',
 mode: 'cors',
 headers: { 'Content-Type': 'application/json' },
@@ -72,7 +72,7 @@ return;
 
 showLoader(); 
 
-fetch('https://user-management-ig8b.onrender.com/user-api/activate-User', {
+fetch('https://user-management-4giw.onrender.com/user-api/activate-User', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ email, tempPassword, confirmPassword }) // Fix: Use confirmPassword, not newPassword
@@ -122,7 +122,7 @@ let password = document.getElementById('loginPassword').value;
 
 showLoader(); 
 
-fetch('https://user-management-ig8b.onrender.com/user-api/login-User', {
+fetch('https://user-management-4giw.onrender.com/user-api/login-User', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ email, password })
