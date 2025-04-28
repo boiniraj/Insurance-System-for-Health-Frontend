@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function fetchPlanDetails() {
     showLoader();
-    fetch('https://data-collection-lrwd.onrender.com/DataCollection-api/plans-data')
+    fetch('https://data-collection-7ozf.onrender.com/DataCollection-api/plans-data')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById('planTableBody');
@@ -37,7 +37,7 @@ function fetchPlanDetails() {
 
 function fetchPlans() {
     showLoader();
-    fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/plans-data")
+    fetch("https://data-collection-7ozf.onrender.com/DataCollection-api/plans-data")
         .then(response => response.json())
         .then(data => {
             let planDropdown = document.getElementById("plan");
