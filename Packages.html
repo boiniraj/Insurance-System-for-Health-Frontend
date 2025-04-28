@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Government Health & Insurance Plans</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+        /* Header Styling */
+        header {
+            background-color: #004080; /* Blue Background */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        header .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        header .auth-buttons a {
+            color: white;
+            padding: 8px 15px;
+            background-color: #27ae60;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        header .auth-buttons a:hover {
+            background-color: #1e8e4a;
+        }
+
+        /* Main Content */
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #2c3e50;
+        }
+        .plan-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .plan-box {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 330px;
+            transition: transform 0.2s;
+        }
+        .plan-box:hover {
+            transform: scale(1.03);
+        }
+        .plan-header {
+            font-size: 22px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .plan-info p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .eligibility {
+            background: #ecf0f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .eligibility h4 {
+            margin: 0 0 5px 0;
+            color: #27ae60;
+            font-size: 16px;
+        }
+        .eligibility ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .eligibility ul li {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        /* Footer Styling */
+        .footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto; /* Ensures the footer sticks to the bottom */
+}
+@media (max-width: 1200px) {
+    .hero-text {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links a {
+        display: block;
+        margin: 10px 0;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .hero-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+    }
+    .hero-section img {
+        min-height: 50vh;
+    }
+    .hero-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+    .buttons button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .hero-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text {
+        font-size: 0.8rem;
+    }
+    .buttons button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Insurance System for Health</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Packages.html">Packages</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="About.html">About Us</a>
+        </div>
+        
+    </header>
+
+    <h1>Government Health & Insurance Plans</h1>
+
+    <div class="plan-container">
+        <!-- Plan Boxes -->
+        <div class="plan-box">
+            <div class="plan-header">SNAP (Food Assistance)</div>
+            <div class="plan-info">
+                <p><span class="highlight">Start Date:</span> 2023-01-01</p>
+                <p><span class="highlight">End Date:</span> 2090-01-01</p>
+                <p>Provides monthly benefits to low-income families to purchase nutritious food.</p>
+            </div>
+            <div class="eligibility">
+                <h4>Eligibility:</h4>
+                <ul>
+                    <li>Household income below &#8377;100,000/year.</li>
+                    <li>Indian citizens or legal immigrants.</li>
+                    <li>Assets below state limits.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan-box">
+            <div class="plan-header">CCAP (Child Care Assistance)</div>
+            <div class="plan-info">
+                <p><span class="highlight">Start Date:</span> 2023-06-01</p>
+                <p><span class="highlight">End Date:</span> 2090-01-01</p>
+                <p>Helps low-income families afford safe, quality childcare while parents work or attend school.</p>
+            </div>
+            <div class="eligibility">
+                <h4>Eligibility:</h4>
+                <ul>
+                    <li>At least one child under 16 years old.</li>
+                    <li>Family income below &#8377;100,000/year.</li>
+                    <li>Parents must be working, job hunting, or studying.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan-box">
+            <div class="plan-header">MEDAID (Medical Aid)</div>
+            <div class="plan-info">
+                <p><span class="highlight">Start Date:</span> 2023-03-01</p>
+                <p><span class="highlight">End Date:</span> 2090-01-01</p>
+                <p>Medical insurance for low-income individuals without property income, covering essential health services.</p>
+            </div>
+            <div class="eligibility">
+                <h4>Eligibility:</h4>
+                <ul>
+                    <li>Annual income less than &#8377;100,000.</li>
+                    <li>No owned property generating income.</li>
+                    <li>Must meet residency and citizenship requirements.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan-box">
+            <div class="plan-header">MEDCARE (Senior Health Plan)</div>
+            <div class="plan-info">
+                <p><span class="highlight">Start Date:</span> 2023-04-01</p>
+                <p><span class="highlight">End Date:</span> 2090-01-01</p>
+                <p>Health coverage for citizens aged 65+, including hospital stays, outpatient care, and medications.</p>
+            </div>
+            <div class="eligibility">
+                <h4>Eligibility:</h4>
+                <ul>
+                    <li>Must be 65 years of age or older.</li>
+                    <li>India. citizen or legal resident for 5+ years.</li>
+                    <li>May include automatic enrollment based on Social Security.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan-box">
+            <div class="plan-header">CAJW (Youth Assistance)</div>
+            <div class="plan-info">
+                <p><span class="highlight">Start Date:</span> 2023-07-01</p>
+                <p><span class="highlight">End Date:</span> 2090-01-01</p>
+                <p>Support program for unemployed youth, offering financial aid, skill training, and job placement services.</p>
+            </div>
+            <div class="eligibility">
+                <h4>Eligibility:</h4>
+                <ul>
+                    <li>No employment income.</li>
+                    <li>Recently completed education (graduated).</li>
+                    <li>Age between 18 and 29 years preferred.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="plan-box">
+            <div class="plan-header">QHP (Qualified Health Plan)</div>
+            <div class="plan-info">
+                <p><span class="highlight">Start Date:</span> 2023-05-01</p>
+                <p><span class="highlight">End Date:</span> 2090-01-01</p>
+                <p>Comprehensive health insurance for higher-income citizens, covering preventive, emergency, and specialist services.</p>
+            </div>
+            <div class="eligibility">
+                <h4>Eligibility:</h4>
+                <ul>
+                    <li>Annual income greater than &#8377;100,000.</li>
+                    <li>Must not qualify for Medicaid or Medicare.</li>
+                    <li>Resident of the India. with valid proof of income.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Add other plan boxes here -->
+
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2025 ISH - All Rights Reserved
+    </div>
+
+</body>
+</html>

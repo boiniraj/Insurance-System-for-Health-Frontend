@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Government Health & Insurance Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Header Styling */
+        header {
+            background-color: #004080; /* Blue Background */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+        header .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        header .auth-buttons a {
+            color: white;
+            padding: 8px 15px;
+            background-color: #27ae60;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        header .auth-buttons a:hover {
+            background-color: #1e8e4a;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #2c3e50;
+        }
+
+        /* Contact Form Container */
+        .contact-container {
+            max-width: 600px;
+            background-color: #ffffff;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-container label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .contact-container input, 
+        .contact-container textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .contact-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-container button:hover {
+            background-color: #2980b9;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: auto; /* Footer stays at the bottom */
+        }
+        @media (max-width: 1200px) {
+    .hero-text {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links a {
+        display: block;
+        margin: 10px 0;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .hero-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+    }
+    .hero-section img {
+        min-height: 50vh;
+    }
+    .hero-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+    .buttons button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .hero-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text {
+        font-size: 0.8rem;
+    }
+    .buttons button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Insurance System for Health</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Packages.html">Packages</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="About.html">About Us</a>
+        </div>
+        
+    </header>
+
+    <h1>Contact Us</h1>
+
+    <div class="contact-container">
+        <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="contact-info">
+            <p>For any queries, reach out to our support team.</p>
+            <p>Email: support@govhealthplans.in</p>
+            <p>Phone: +91-9876543210</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2025 ISH - All Rights Reserved
+    </footer>
+
+</body>
+</html>
