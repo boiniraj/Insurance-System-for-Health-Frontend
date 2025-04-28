@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             showLoader();
-            const response = await fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/saveChild", {
+            const response = await fetch("https://data-collection-7ozf.onrender.com/DataCollection-api/saveChild", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(childData)

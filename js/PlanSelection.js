@@ -73,7 +73,7 @@ function savePlan() {
 
     showLoader();
 
-    fetch("https://data-collection-lrwd.onrender.com/DataCollection-api/savePlan", {
+    fetch("https://data-collection-7ozf.onrender.com/DataCollection-api/savePlan", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

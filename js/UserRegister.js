@@ -90,7 +90,7 @@ function showLoader() {
 
             showLoader();
 
-            fetch('https://citizen-registrations.onrender.com/citizen-api/save', {
+            fetch('https://citizen-registrations-8a26.onrender.com/citizen-api/save', {
                 method: 'POST',
                 mode: 'cors',    
                 headers: { 'Content-Type': 'application/json' },

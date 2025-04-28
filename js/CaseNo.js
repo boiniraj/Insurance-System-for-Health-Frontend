@@ -8,7 +8,7 @@ function showLoader() {
   }
   
 
-const BASE_URL = "https://data-collection-lrwd.onrender.com/DataCollection-api";
+const BASE_URL = "https://data-collection-7ozf.onrender.com/DataCollection-api";
 
         async function generateCaseNo() {
 
