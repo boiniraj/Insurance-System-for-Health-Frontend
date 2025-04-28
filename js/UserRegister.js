@@ -97,24 +97,23 @@ function showLoader() {
                 body: JSON.stringify(requestData)
             })
             .then(response => response.json())
-            .then(data =>
-            { 
+            .then(data => { 
                 hideLoader();
-              if(data.error)
-            {
-               document.getElementById("emailError").innerText="Email already registered";
-               document.getElementById("emailError").style.color="red";   
-
-            } else{ 
-                
-                
-                document.getElementById('registerResponse').innerText = "Register Successfully Completed";
-                setTimeout(() => {
-            window.location.href = 'CaseNo.html'; // Change the URL as needed
-             }, 2000);
-            }
-            
-    })
+                if (data.error) {
+                    if (data.error.includes("email")) { 
+                        document.getElementById("emailError").innerText = "Email already registered";
+                        document.getElementById("emailError").style.color = "red";   
+                    } else {
+                        registerResponse.style.color = "red";
+                        registerResponse.innerText = data.error || "Registration failed. Please try again!";
+                    }
+                } else { 
+                    document.getElementById('registerResponse').innerText = "Register Successfully Completed";
+                    setTimeout(() => {
+                        window.location.href = 'CaseNo.html';
+                    }, 2000);
+                }
+            })            
     
     .catch(error => {
         hideLoader();  // 👉 Hide loader on error
