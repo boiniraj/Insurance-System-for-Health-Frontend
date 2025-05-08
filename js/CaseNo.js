@@ -27,7 +27,7 @@ const BASE_URL = "https://data-collection-7ozf.onrender.com/DataCollection-api";
             alert('Generated Case No: ' + caseNo);
             setTimeout(() => {
                 window.location.href = "PlanSelection.html"; // Change "nextPage.html" to your actual page
-            }, 5000);
+            }, 1000);
         }catch (error) {
             console.error('Error generating case number:', error);
             alert('Something went wrong. Please try again.');
